@@ -148,8 +148,6 @@ function init() {
 			var tail = {x: head_x, y:head_y};
 			snake.unshift(tail);	
 			score += 10;
-			initSnake.length= initSnake.length+12;
-			initSnake();
 			scoreText.innerHTML = "Score: "+score;
 			foodMusic.pause();
 			foodMusic.currentTime = 0;
