@@ -82,10 +82,10 @@ function init() {
 	}
 			
 			var f = new Food();
-	
-	//Initialize the snake
+				//Initialize the snake
 	function initSnake() {
 		var length = 10;
+
 		snake = [];
 		for(var i = length - 1; i >= 0; i--) {
 			snake.push({x: i, y: 0});
@@ -148,6 +148,8 @@ function init() {
 			var tail = {x: head_x, y:head_y};
 			snake.unshift(tail);	
 			score += 10;
+			initSnake.length= initSnake.length+12;
+			initSnake();
 			scoreText.innerHTML = "Score: "+score;
 			foodMusic.pause();
 			foodMusic.currentTime = 0;
@@ -189,7 +191,7 @@ function init() {
 		reMenu.style.zIndex = "-1"
 		dir = "right";
 		over = 0;
-		speed = 30;
+		speed = 20;
 		if(typeof game_loop != "undefined")  clearInterval(game_loop); 
 		game_loop = setInterval(draw, 1000/speed);
 		
