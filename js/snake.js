@@ -44,7 +44,7 @@ function init() {
 	
 	var snake,
 			size = 10,
-			speed = 2,
+			speed = 15,
 			dir,
 			game_loop,
 			over = 0,
@@ -111,10 +111,10 @@ function init() {
 			var key = e.keyCode;
 			//console.log(key);
 			
-			if(key == 37 && dir != "right") setTimeout(function() {dir = "left"; }, 30);
-			else if(key == 38 && dir != "down") setTimeout(function() {dir = "up"; }, 30);
-			else if(key == 39 && dir != "left") setTimeout(function() {dir = "right"; }, 30);
-			else if(key == 40 && dir != "up") setTimeout(function() {dir = "down"; }, 30);
+			if(key == 37 && dir != "right") setTimeout(function() {dir = "left"; }, 15);
+			else if(key == 38 && dir != "down") setTimeout(function() {dir = "up"; }, 15);
+			else if(key == 39 && dir != "left") setTimeout(function() {dir = "right"; }, 15);
+			else if(key == 40 && dir != "up") setTimeout(function() {dir = "down"; }, 15);
 
 			if(key) e.preventDefault();
 
@@ -172,7 +172,9 @@ function init() {
 				}
 			} 
 		}
+		
 	}
+	
 	
 	function draw() {
 		paintCanvas();
@@ -208,7 +210,7 @@ function init() {
 			goMusic.play();
 			
 			var tweet = document.getElementById("tweet");
-			tweet.href='http://twitter.com/share?url=http://bit.ly/SnakeHTML5&text=I scored ' +score+ ' points in the classic HTML5 Snake game&count=horiztonal&via=cssdeck';
+			tweet.href='http://twitter.com/share?url=http://syam1123.github.io/Snake/&text=I scored ' +score+ ' points in the classic HTML5 Snake game';
 			
 			//Get the gameover text
 			var goText = document.getElementById("info2");
