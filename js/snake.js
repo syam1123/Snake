@@ -111,10 +111,10 @@ function init() {
 			var key = e.keyCode;
 			//console.log(key);
 			
-			if(key == 37 && dir != "right") setTimeout(function() {dir = "left"; }, 15);
-			else if(key == 38 && dir != "down") setTimeout(function() {dir = "up"; }, 15);
-			else if(key == 39 && dir != "left") setTimeout(function() {dir = "right"; }, 15);
-			else if(key == 40 && dir != "up") setTimeout(function() {dir = "down"; }, 15);
+			if(key == 37 && dir != "right") setTimeout(function() {dir = "left"; }, 2);
+			else if(key == 38 && dir != "down") setTimeout(function() {dir = "up"; }, 2);
+			else if(key == 39 && dir != "left") setTimeout(function() {dir = "right"; }, 2);
+			else if(key == 40 && dir != "up") setTimeout(function() {dir = "down"; }, 2);
 
 			if(key) e.preventDefault();
 
